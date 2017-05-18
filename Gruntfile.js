@@ -13,6 +13,9 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
 		sass: {
+            options: {
+                outputStyle: 'expanded'
+            },
 			dist: {
 				files: {
 					'public/asset/css/style.css': 'src/scss/style.scss'
