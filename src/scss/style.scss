@@ -159,6 +159,12 @@ body {
             left: -4px;
         }
     }
+    @media (max-width: $breakpoint-2) {
+        display: none;
+    }
+}
+
+.control {
     .header-search {
         display: inline-block;
         margin-right: 14px;
@@ -173,6 +179,7 @@ body {
             &::-moz-placeholder { color:#ffffff; } /* firefox 19+ */
             &:-ms-input-placeholder { color:#ffffff; } /* ie */
         }
+
     }
     .btn-search {
         background-color: transparent;
@@ -196,47 +203,171 @@ body {
     }
 }
 
-.site-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 36px 60px 36px 0;
+.mobile-nav {
+    background-color: $dark-blue;
+    display: none;
+    @media (max-width: $breakpoint-2) {
+        display: block;
+    }
+    &.open {
+        .list {
+            display: block;
+        }
+        .hamburger {
+            border: 0;
+
+            &:before {
+                transform: translateY(7px) rotate(45deg);
+                top: 1px;
+            }
+
+            &:after {
+                transform: translateY(7px) rotate(-45deg);
+                top: 1px;
+            }
+        }
+    }
+    .top-nav-bar {
+        padding-top: 18px;
+        padding-bottom: 17px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hamburger {
+        height: 26px;
+        width: 30px;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        border-top: 3px solid $white;
+        position: relative;
+        background-color: transparent;
+        margin-top: 6px;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-top: 3px solid $white;
+        }
+
+        &:before {
+            transform: translateY(7px);
+            top: -1px;
+        }
+
+        &:after {
+            transform: translateY(18px);
+            top: -3px;
+        }
+    }
     .logo {
         font-family: 'Jack Frost', sans-serif;
         font-size: 18px;
         line-height: 1.9;
         font-weight: 400;
     }
-    .menu-item {
-        display: inline-block;
+    .list{
+        display: none;
+        border-top: 1px solid #289ffa;
+        border-bottom: 2px solid #289ffa;
+        &.control {
+            border-top: none;
+        }
         .link {
-            display: inline-block;
-            padding: 7px 16px 9px 17px;
-            border: 1px solid transparent;
+            width: 100%;
+            display: block;
+            text-align: center;
+            background-color: #1095fa;
+            border-bottom: 1px solid #289ffa;
+            padding: 13px 0;
             &:hover {
                 color: #3a3a3a;
-                background-color: #1095fa;
-                border: 1px solid #289ffa;
-            }  
+            }
+        }
+        .login {
+            font-weight: 400;
+            &:hover {
+                color: #3a3a3a;
+            }
+        }
+        .control {
+            padding-top: 18px;
+            padding-bottom: 17px;
+            text-align: center;
+            background-color: #1095fa;
+        }
+        .header-search {
+            margin-right: 0;
+        }
+        .search-field {
+            background-color: #289ffa;
+            border: none;
         }
     }
 }
 
-.home_slider {
+.home {
     color: $white;
     background: url('../img/header-bg.png') $blue;
     background-position: center bottom -80px;
     background-repeat: no-repeat;
     background-size: cover;
-    .slider-text {
+    .content {
         text-align: center;
-        padding: 67px 130px 195px 130px;
+        padding: 67px 100px 195px 100px;
         .paragraph {
             letter-spacing: 2px;
             margin-bottom: 42px;
         }
+        @media (max-width: $breakpoint-2) {
+            padding: 90px 30px 150px 30px;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 90px 0 150px 0;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 60px 0 100px 0;
+        }
+        .headline-1 {
+            @media (max-width: $breakpoint-3) {
+                font-size: 44px;
+            }
+            @media (max-width: $breakpoint-4) {
+                font-size: 36px;
+            }
+        }
     }
     .btn {
         @include btn_white();
+    }
+    .site-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 36px 60px 36px 0;
+        .logo {
+            font-family: 'Jack Frost', sans-serif;
+            font-size: 18px;
+            line-height: 1.9;
+            font-weight: 400;
+        }
+        .menu-item {
+            display: inline-block;
+            .link {
+                display: inline-block;
+                padding: 7px 16px 9px 17px;
+                border: 1px solid transparent;
+                &:hover {
+                    color: #3a3a3a;
+                    background-color: #1095fa;
+                    border: 1px solid #289ffa;
+                }  
+            }
+        }
+        @media (max-width: $breakpoint-2) {
+            display: none;
+        }  
     }
 }
 
@@ -310,8 +441,8 @@ body {
     }
 
     .slider {
-        height: 469px;
-        width: 466px;
+        height: auto;
+        width: 100%;
         @include box-shadow(0.2);
 
         .slick-dots {
@@ -375,6 +506,9 @@ body {
             background-color: $white;
             height: 2px;
             width: 28px;
+            @media (max-width: $breakpoint-2) {
+                display: none;
+            }
         }
         &:before {
             top: 0;
@@ -408,10 +542,16 @@ body {
 
         .decoration {
             top: 0;
+            @media (max-width: 490px) {
+                display: none;
+            }
         }
 
         .decor-bottom {
             bottom: 0;
+            @media (max-width: 490px) {
+                display: none;
+            }
         }
 
         .decor_1 {
@@ -460,11 +600,18 @@ body {
             bottom: 144px;
             left: -76px;
             transform: rotate(-90deg);
+            @media (max-width: $breakpoint-3) {
+                display: none;
+            }
         }
         @media (max-width: $breakpoint-2) {
             top: 0;
             left: 50%;
             transform: translate(-50%);
+        }
+        @media (max-width: 490px) {
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -1166,12 +1313,37 @@ body {
         .headline-4 {
             margin-bottom: 20px;
         }
+
+        .contact {
+            width: 170px;
+            margin: 0 auto;
+            display: none;
+            @media (max-width: $breakpoint-2) {
+                display: block;
+            }
+        }
+
+        .link {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            &:hover {
+                color: white;
+            }
+            .icon {
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                top: -1px;
+            }
+        }
     }
     .socials {
         display: flex;
         justify-content: space-between;
-        @media (max-width: $breakpoint-1) {
-            width: 150px;
+        width: 150px;
+        @media (max-width: $breakpoint-2) {
+            margin-bottom: 20px;
         }
         @media (max-width: $breakpoint-3) {
             width: 100%;

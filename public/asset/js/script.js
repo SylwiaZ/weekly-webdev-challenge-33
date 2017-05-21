@@ -33,6 +33,10 @@ $(document).ready(function(){
         ]
     });
 
+    $('.mobile-nav .hamburger').click(function() {
+        $(this).parents('.mobile-nav').toggleClass('open');
+    });
+
     var totalSlides = $('.about-us .slider .slide:not(.slick-cloned)').length;
     console.log(totalSlides);
     /*var currentIndex = $('div.active').index() + 1;
