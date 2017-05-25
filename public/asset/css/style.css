@@ -688,6 +688,63 @@ body {
   color: #000;
 }
 
+.pulsating-dot {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  right: 145px;
+  bottom: -87px;
+}
+
+.pulsating-dot .pulse {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pulsating-dot .circle-1 {
+  height: 10px;
+  width: 10px;
+  background-color: #5cb7fb;
+  border: 1px solid #5cc7ea;
+  z-index: 3;
+}
+
+.pulsating-dot .circle-2 {
+  height: 20px;
+  width: 20px;
+  background-color: #80c7fc;
+  border: 1px solid #80dee1;
+  z-index: 2;
+  animation: pulsating 2.5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulsating-dot .circle-3 {
+  height: 30px;
+  width: 30px;
+  background-color: #b4defd;
+  border: 1px solid #b4ffd7;
+  z-index: 1;
+  animation: pulsating 2.5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulsating {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*--header--*/
 .top-bar {
   padding: 18px 0 17px 0;
@@ -1025,9 +1082,22 @@ body {
   position: relative;
 }
 
+@media (max-width: 1200px) {
+  .about-us .container {
+    padding-bottom: 90px;
+  }
+}
+
 @media (max-width: 992px) {
   .about-us .container {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1120,8 +1190,15 @@ body {
 
 @media (max-width: 992px) {
   .about-us .item-slider {
-    height: 550px;
+    height: auto;
     position: relative;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 490px) {
+  .about-us .item-slider {
+    padding-bottom: 60px;
   }
 }
 
@@ -1138,6 +1215,19 @@ body {
   position: absolute;
   bottom: -80px;
   left: 139px;
+}
+
+@media (max-width: 767px) {
+  .about-us .slider .slick-dots {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 490px) {
+  .about-us .slider .slick-dots {
+    bottom: -57px;
+  }
 }
 
 .about-us .slider .slick-dots li {
@@ -1326,8 +1416,15 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .about-us .slider-area .pulsating-dot {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .about-us .slider-area {
+    position: relative;
     top: 0;
     left: 50%;
     transform: translate(-50%);
@@ -1338,6 +1435,7 @@ body {
   .about-us .slider-area {
     width: 100%;
     height: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -1371,9 +1469,19 @@ body {
 /*--services--*/
 .services {
   background-color: #f7f7f7;
+  text-align: center;
+}
+
+.services .container {
   padding-top: 84px;
   padding-bottom: 90px;
-  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .services .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .services .text-boxes {
@@ -1524,6 +1632,12 @@ body {
 /*--blog--*/
 .blog {
   padding: 80px 0;
+}
+
+@media (max-width: 767px) {
+  .blog {
+    padding: 60px 0;
+  }
 }
 
 .blog .latest-post {
@@ -1702,9 +1816,24 @@ body {
 
 @media (max-width: 767px) {
   .blog .slider-area .counter {
-    left: 20%;
-    transform: translate(-50%);
-    bottom: -60px;
+    display: none;
+  }
+}
+
+.blog .slider-area .pulsating-dot {
+  top: 97px;
+  left: -107px;
+}
+
+@media (max-width: 992px) {
+  .blog .slider-area .pulsating-dot {
+    left: -79px;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog .slider-area .pulsating-dot {
+    display: none;
   }
 }
 
@@ -2004,6 +2133,13 @@ body {
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  .newsletter .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .newsletter .headline-3 {
   width: 400px;
 }
@@ -2208,6 +2344,13 @@ body {
   padding-bottom: 86px;
 }
 
+@media (max-width: 767px) {
+  .partners .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .partners .headline-3 {
   font-size: 36px;
   text-align: center;
@@ -2276,18 +2419,20 @@ body {
 .foot-menu {
   color: #ffffff;
   background-color: #0891f9;
-  padding-top: 77px;
-  padding-bottom: 69px;
 }
 
 .foot-menu .foot-nav {
   display: flex;
   justify-content: space-between;
+  padding-top: 77px;
+  padding-bottom: 69px;
 }
 
 @media (max-width: 767px) {
   .foot-menu .foot-nav {
     flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
