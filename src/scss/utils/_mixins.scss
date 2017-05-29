@@ -1,12 +1,11 @@
 @mixin btn_white() {
-    @include btn($white);
+    @include btn($white-font);
     &:hover {
         border: 2px solid #3a3a3a;
         background-color: transparent;
         color: #3a3a3a;
     }
 }
-
 
 @mixin btn($color) {
     font-weight: 400;
@@ -21,7 +20,7 @@
     cursor: pointer;
     transition: all 0.2s linear;
     &:hover {
-        color: $white;
+        color: $white-font;
         background-color: #80c7fc;
         border: 2px solid #289ffa;
         transition: all 0.2s linear;
@@ -38,4 +37,28 @@
     -webkit-box-shadow: 0px 0px 30px $spread rgba(8,145,249,0.1);
     -moz-box-shadow: 0px 0px 30px $spread rgba(8,145,249,0.1);
     box-shadow: 0px 0px 30px $spread rgba(8,145,249,0.1);
+}
+
+@mixin decor-line($deg, $location) {
+    width: 100px;
+    height: 2px;
+    background-color: $bg-col-1;
+    position: absolute;
+    transform: rotate($deg);
+    transform-origin: $location;
+    z-index: 1;
+    @media (max-width: 490px) {
+        display: none;
+    }
+}
+
+@mixin decor-circle() {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: 2px solid $bg-col-1;
+    position: absolute;
+    top: -3px;
 }

@@ -45,7 +45,7 @@
             }
         }
         .btn {
-            @include btn($blue);
+            @include btn($bg-col-1);
             margin-top: 69px;
             @media (max-width: $breakpoint-2) {
                 align-self: flex-end;
@@ -58,11 +58,9 @@
             }
         }
     }
-
     .popular-posts {
         display: flex;
     }
-
     .slider-post {
         width: 50%;
         position: relative;
@@ -71,7 +69,6 @@
             padding-bottom: 65px;
         }
     }
-
     .slider-area {
         height: 382px;
         width: 564px;
@@ -121,18 +118,16 @@
             }
         }
     }
-
     .slider {
         height: 100%;
         width: 100%;
         @include box-shadow(0.2);
-
         &:before, &:after {
             content: '';
             height: 10px;
             width: 115px;
             display: block;
-            background-color: $blue;
+            background-color: $bg-col-2;
             position: absolute;
             right: 125px;
             @media (max-width: $breakpoint-1) {
@@ -148,12 +143,11 @@
         &:after {
             bottom: -10px;
         }
-
         .slick-dots {
             position: absolute;
             bottom: 98px;
             left: -98px;
-            @media (max-width: $breakpoint-2) {
+            @media (max-width: $breakpoint-1) {
                 left: -70px;
             }
             @media (max-width: $breakpoint-3) {
@@ -175,7 +169,7 @@
                 height: 10px;
                 width: 10px;
                 border: 2px solid #000;
-                background-color: $white;
+                background-color: $bg-col-3;
                 color: transparent;
                 cursor: pointer;
                 outline: none;
@@ -183,11 +177,10 @@
                     vertical-align: middle;
                 }
                 &:hover {
-                    background-color: $blue;
+                    background-color: $bg-col-1;
                 } 
             }
         }
-
         .icon-left {
             bottom: -4px;
             left: -218px;
@@ -202,7 +195,6 @@
                 display: none;
             }
         }
-
         .icon-right {
             bottom: -4px;
             left: -166px;
@@ -217,18 +209,16 @@
                 display: none;
             }
         }
-
         .slick-active {
             button {
                 height: 15px;
                 width: 15px;
                 border: 3px solid #000;
-                background-color: $blue;
+                background-color: $bg-col-1;
             }
         }
-
         .slide {
-            background-color: $white;
+            background-color: $bg-col-3;
             height: 382px;
             padding: 37px 77px 85px 74px;
             position: relative;
@@ -242,7 +232,6 @@
             @media (max-width: $breakpoint-4) {
                 padding: 37px 40px 120px 40px;
             }
-
             .headline-2 {
                 text-transform: uppercase;
                 text-align: center;
@@ -264,7 +253,6 @@
             .par-1 {
                 margin-bottom: 24px;
             }
-
             .rating {
                 position: absolute;
                 bottom: 37px;
@@ -304,7 +292,7 @@
                 }
             }
             .icon-heart {
-                color: $blue;
+                color: $blue-font;
                 &:before {
                     margin: 0 5px;
                 }
@@ -316,7 +304,6 @@
             }
         }
     }
-
     .picture {
         width: 50%;
         height: 549px;

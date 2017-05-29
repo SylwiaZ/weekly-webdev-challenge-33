@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 300;
-    color: $grey-text;
+    color: $grey-font;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 
 .link {
     text-decoration: none;
-    color: $white;
+    color: $white-font;
 }
 
 * {
@@ -48,7 +48,7 @@ body {
 .headline-2 {
     font-size: 36px;
     font-weight: 400;
-    color: $grey-text;
+    color: $grey-font;
     letter-spacing: 3px;
     margin-bottom: 26px;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .primary-text {
-    color: $blue;
+    color: $blue-font;
 }
 
 .under-headline {

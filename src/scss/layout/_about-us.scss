@@ -15,7 +15,6 @@
             padding-bottom: 60px;
         }
     }
-
     .article {
         padding-right: 124px;
         @media (max-width: $breakpoint-2) {
@@ -45,7 +44,7 @@
             }
         }
         .btn {
-            @include btn($blue);
+            @include btn($bg-col-1);
             margin-top: 39px;
             @media (max-width: $breakpoint-2) {
                 align-self: flex-end;
@@ -55,7 +54,6 @@
             }
         }
     }
-
     .par1 {
         line-height: 30px;
         margin-bottom: 20px;
@@ -73,64 +71,6 @@
             padding-bottom: 60px;
         }
     }
-    .slider {
-        height: auto;
-        width: 100%;
-        @include box-shadow(0.2);
-        .slick-dots {
-            list-style: none;
-            position: absolute;
-            bottom: -80px;
-            left: 139px;
-            @media(max-width: $breakpoint-3) {
-                left: 50%;
-                transform: translate(-50%);
-            }
-            @media (max-width: 490px) {
-                bottom: -57px;
-            }
-            li {
-                display: inline-block;
-                margin: 0 7px; 
-            }
-            button {
-                border-radius: 50%;
-                height: 10px;
-                width: 10px;
-                border: 2px solid #000;
-                background-color: $white;
-                color: transparent;
-                cursor: pointer;
-                outline: none;
-                vertical-align: middle;
-                &:hover {
-                    background-color: $blue;
-                } 
-            }
-        }
-        .slick-active {
-            button {
-                height: 15px;
-                width: 15px;
-                border: 3px solid #000;
-                background-color: $blue;
-            }
-        }
-        .icon-up {
-            top: 175px;
-            left: -71px;
-            @media (max-width: $breakpoint-3) {
-                display: none;
-            }
-        }
-        .icon-down {
-            top: 226px;
-            left: -71px;
-            @media (max-width: $breakpoint-3) {
-                display: none;
-            }
-        }
-    }
     .slider-area {
         width: 466px;
         height: 469px;
@@ -141,7 +81,7 @@
             content: '';
             display: block;
             position: absolute;
-            background-color: $white;
+            background-color: $bg-col-3;
             height: 2px;
             width: 28px;
             @media (max-width: $breakpoint-2) {
@@ -159,70 +99,41 @@
             right: -27px;
             transform: rotate(-37deg);
             transform-origin: top left;
-        }
-        .decoration,
-        .decor-bottom {
-            position: absolute;
-            width: 100px;
-            height: 2px;
-            background-color: $blue;
-            z-index: 1;
-            &:after {
-                content: '';
-                display: block;
-                height: 6px;
-                width: 6px;
-                border-radius: 50%;
-                border: 2px solid $blue;
-                position: absolute;
-            }
-        }
-        .decoration {
+        } 
+        .decor-1 {
+            @include decor-line(37deg, top left);
             top: 0;
-            @media (max-width: 490px) {
-                display: none;
+            left: 1px;
+            &:after {
+                @include decor-circle();
+                right: -10px; 
             }
         }
-        .decor-bottom {
+        .decor-2 {
+            @include decor-line(-37deg, top right);
+            top: 0;
+            right: 1px;
+            &:after {
+                @include decor-circle(); 
+                left: -10px;
+            }
+        }
+        .decor-3 {
+            @include decor-line(37deg, top left);
             bottom: 0;
-            @media (max-width: 490px) {
-                display: none;
-            }
-        }
-        .decor_1 {
             left: 1px;
-            transform: rotate(37deg);
-            transform-origin: top left;
             &:after {
-                top: -3px;
+                @include decor-circle();
                 right: -10px; 
             }
         }
-        .decor_2 {
+        .decor-4 {
+            @include decor-line(-37deg, top right);
+            bottom: 0;
             right: 1px;
-            transform: rotate(-37deg);
-            transform-origin: top right;
             &:after {
-                top: -3px;
-                left: -10px; 
-            }
-        }
-        .decor_3 {
-            left: 1px;
-            transform: rotate(37deg);
-            transform-origin: top left;
-            &:after {
-                top: -3px;
-                right: -10px; 
-            }
-        }
-        .decor_4 {
-            right: 1px;
-            transform: rotate(-37deg);
-            transform-origin: top right;
-            &:after {
-                top: -3px;
-                left: -10px; 
+                @include decor-circle(); 
+                left: -10px;
             }
         }
         .counter {
@@ -251,6 +162,64 @@
             width: 100%;
             height: auto;
             padding-bottom: 0;
+        }
+    }
+    .slider {
+        height: auto;
+        width: 100%;
+        @include box-shadow(0.2);
+        .slick-dots {
+            list-style: none;
+            position: absolute;
+            bottom: -80px;
+            left: 139px;
+            @media(max-width: $breakpoint-3) {
+                left: 50%;
+                transform: translate(-50%);
+            }
+            @media (max-width: 490px) {
+                bottom: -57px;
+            }
+            li {
+                display: inline-block;
+                margin: 0 7px; 
+            }
+            button {
+                border-radius: 50%;
+                height: 10px;
+                width: 10px;
+                border: 2px solid #000;
+                background-color: $bg-col-3;
+                color: transparent;
+                cursor: pointer;
+                outline: none;
+                vertical-align: middle;
+                &:hover {
+                    background-color: $bg-col-2;
+                } 
+            }
+        }
+        .slick-active {
+            button {
+                height: 15px;
+                width: 15px;
+                border: 3px solid #000;
+                background-color: $bg-col-1;
+            }
+        }
+        .icon-up {
+            top: 175px;
+            left: -71px;
+            @media (max-width: $breakpoint-3) {
+                display: none;
+            }
+        }
+        .icon-down {
+            top: 226px;
+            left: -71px;
+            @media (max-width: $breakpoint-3) {
+                display: none;
+            }
         }
     }
     .slide {

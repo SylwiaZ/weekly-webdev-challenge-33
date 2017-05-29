@@ -1,5 +1,5 @@
 .services {
-    background-color: $bg-color;
+    background-color: $bg-col-2;
     text-align: center;
     .container {
         padding-top: 84px;
@@ -9,7 +9,6 @@
             padding-bottom: 60px;
         }
     }
-
     .text-boxes {
         display: flex;
         justify-content: space-between;
@@ -18,10 +17,9 @@
             align-items: center;
         }
     }
-
     .text-box {
         width: calc(33.333333% - 19px);
-        background-color: $white;
+        background-color: $bg-col-3;
         padding: 34px 40px 44px 40px;
         position: relative;
         @include box-shadow(0.2);
@@ -29,7 +27,8 @@
             @include blue-box-shadow(10px);
             transition: all 0.3s;
         }
-        &:hover .decoration {
+        &:hover .decor-1,
+        &:hover .decor-2 {
             display: block;
         }
         @media (max-width: $breakpoint-2) {
@@ -44,55 +43,36 @@
             width: 100%;
         }
 
-        .decoration {
-            position: absolute;
+        .decor-1 {
+            @include decor-line(37deg, top left);
             top: 0;
-            width: 100px;
-            height: 2px;
-            background-color: $blue;
+            left: 1px;
             display: none;
+            animation: width 0.5s;
+            animation-timing-function: ease-in-out;
             &:after {
-                content: '';
-                display: block;
-                height: 6px;
-                width: 6px;
-                border-radius: 50%;
-                border: 2px solid $blue;
-                position: absolute;
+                @include decor-circle();
+                right: -10px; 
             }
         }
-        
+        .decor-2 {
+            @include decor-line(-37deg, top right);
+            top: 0;
+            right: 1px;
+            display: none;
+            animation: width 0.5s;
+            animation-timing-function: ease-in-out;
+            &:after {
+                @include decor-circle(); 
+                left: -10px;
+            }
+        }
         @keyframes width {
             0% { width: 0; }
             100% { width: 100px; }
         }
-
-        .decor_1 {
-            left: 1px;
-            transform: rotate(37deg);
-            transform-origin: top left;
-            animation: width 0.5s;
-            animation-timing-function: ease-in-out;
-            &:after {
-                top: -3px;
-                right: -10px; 
-            }
-        }
-
-        .decor_2 {
-            right: 1px;
-            transform: rotate(-37deg);
-            transform-origin: top right;
-            animation: width 0.5s;
-            animation-timing-function: ease-in-out;
-            &:after {
-                top: -3px;
-                left: -10px; 
-            }
-        }
-
         .icon {
-            color: $blue;
+            color: $blue-font;
             display: inline-block;
             height: 90px;
             width: 90px;
@@ -129,7 +109,6 @@
             }
         }
     }
-
     .under-headline {
         margin-bottom: 48px;
     }

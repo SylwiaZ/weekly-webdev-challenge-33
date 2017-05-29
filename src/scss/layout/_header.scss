@@ -1,225 +1,90 @@
-.top-bar {
-    padding: 18px 0 17px 0;
-    background-color: $dark-blue;
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .tb-contact {
-        padding-top: 9px;
-        .link {
-            padding-left: 31px;
-            position: relative;
-            letter-spacing: 1.5px; 
+.header {
+    position: relative;
+    .top-bar {
+        padding: 18px 0 17px 0;
+        background-color: $bg-bar-col;
+        .container {
+            display: flex;
+            justify-content: space-between;
         }
-        .tb-tel {
-            margin-right: 41px;
-            letter-spacing: 1px;
-            word-spacing: -2px;
-            letter-spacing: 1.5px;
-        }
-    }
-    .icon {
-        font-size: 16px;
-        position: absolute;
-        left: 0;
-        &:before {
-            margin-left: 0;
-        }
-        &.icon-mail {
-            top: 1px;
-            left: -4px;
-        }
-    }
-    @media (max-width: $breakpoint-2) {
-        display: none;
-    }
-}
-
-.control {
-    .header-search {
-        display: inline-block;
-        margin-right: 14px;
-        position: relative;
-        .search-field {
-            border: 1px solid #2192e8;
-            background-color: #0988e8;
-            padding: 9px 89px 8px 39px;
-            letter-spacing: 1px;
-            color: $white;
-            &::-webkit-input-placeholder { color:#ffffff; }
-            &::-moz-placeholder { color:#ffffff; } /* firefox 19+ */
-            &:-ms-input-placeholder { color:#ffffff; } /* ie */
-        }
-
-    }
-    .btn-search {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: $white;
-        cursor: pointer;
-        position: absolute;
-        right: 36px;
-        top: 10px;
-        &:before {
-            font-size: 15px;
-            transform: rotate(84deg);
-        }
-    }
-    .login {
-        letter-spacing: 1.5px;
-        transition: all 0.2s linear;
-        &:hover {
-            color: #3a3a3a;
-            transition: all 0.2s linear;
-        } 
-    }
-}
-
-.mobile-nav {
-    background-color: $dark-blue;
-    display: none;
-    @media (max-width: $breakpoint-2) {
-        display: block;
-    }
-    &.open {
-        .list {
-            display: block;
-        }
-        .hamburger {
-            border: 0;
-
-            &:before {
-                transform: translateY(7px) rotate(45deg);
-                top: 1px;
+        .tb-contact {
+            padding-top: 9px;
+            .link {
+                padding-left: 31px;
+                position: relative;
+                letter-spacing: 1.5px; 
             }
-
-            &:after {
-                transform: translateY(7px) rotate(-45deg);
-                top: 1px;
+            .tb-tel {
+                margin-right: 41px;
+                letter-spacing: 1px;
+                word-spacing: -2px;
+                letter-spacing: 1.5px;
             }
         }
-    }
-    .top-nav-bar {
-        padding-top: 18px;
-        padding-bottom: 17px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .hamburger {
-        height: 26px;
-        width: 30px;
-        cursor: pointer;
-        outline: none;
-        border: 0;
-        border-top: 3px solid $white;
-        position: relative;
-        background-color: transparent;
-        margin-top: 6px;
-
-        &:before, &:after {
-            content: '';
+        .icon {
+            font-size: 16px;
             position: absolute;
             left: 0;
-            width: 100%;
-            border-top: 3px solid $white;
+            &:before {
+                margin-left: 0;
+            }
+            &.icon-mail {
+                top: 1px;
+                left: -4px;
+            }
         }
-
-        &:before {
-            transform: translateY(7px);
-            top: -1px;
-        }
-
-        &:after {
-            transform: translateY(18px);
-            top: -3px;
+        @media (max-width: $breakpoint-2) {
+            display: none;
         }
     }
-    .logo {
-        font-family: 'Jack Frost', sans-serif;
-        font-size: 18px;
-        line-height: 1.9;
-        font-weight: 400;
-    }
-    .list{
-        display: none;
-        border-top: 1px solid #289ffa;
-        border-bottom: 2px solid #289ffa;
-        &.control {
-            border-top: none;
+    .control {
+        .header-search {
+            display: inline-block;
+            margin-right: 14px;
+            position: relative;
+            .search-field {
+                border: 1px solid #2192e8;
+                background-color: #0988e8;
+                padding: 9px 89px 8px 39px;
+                letter-spacing: 1px;
+                color: $white-font;
+                &::-webkit-input-placeholder { color:#ffffff; }
+                &::-moz-placeholder { color:#ffffff; } /* firefox 19+ */
+                &:-ms-input-placeholder { color:#ffffff; } /* ie */
+            }
         }
-        .link {
-            width: 100%;
-            display: block;
-            text-align: center;
-            background-color: #1095fa;
-            border-bottom: 1px solid #289ffa;
-            padding: 13px 0;
-            &:hover {
-                color: #3a3a3a;
+        .btn-search {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $white-font;
+            cursor: pointer;
+            position: absolute;
+            right: 36px;
+            top: 10px;
+            &:before {
+                font-size: 15px;
+                transform: rotate(84deg);
             }
         }
         .login {
-            font-weight: 400;
+            letter-spacing: 1.5px;
+            transition: all 0.2s linear;
             &:hover {
                 color: #3a3a3a;
-            }
+                transition: all 0.2s linear;
+            } 
         }
-        .control {
-            padding-top: 18px;
-            padding-bottom: 17px;
-            text-align: center;
-            background-color: #1095fa;
-        }
-        .header-search {
-            margin-right: 0;
-        }
-        .search-field {
-            background-color: #289ffa;
-            border: none;
-        }
-    }
-}
-
-.home {
-    color: $white;
-    background: url('../img/header-bg.png') $blue;
-    background-position: center bottom -80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .content {
-        text-align: center;
-        padding: 67px 100px 195px 100px;
-        .paragraph {
-            letter-spacing: 2px;
-            margin-bottom: 42px;
-        }
-        @media (max-width: $breakpoint-2) {
-            padding: 90px 30px 150px 30px;
-        }
-        @media (max-width: $breakpoint-3) {
-            padding: 90px 0 150px 0;
-        }
-        @media (max-width: $breakpoint-3) {
-            padding: 60px 0 100px 0;
-        }
-        .headline-1 {
-            @media (max-width: $breakpoint-3) {
-                font-size: 44px;
-            }
-            @media (max-width: $breakpoint-4) {
-                font-size: 36px;
-            }
-        }
-    }
-    .btn {
-        @include btn_white();
     }
     .site-nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 36px 60px 36px 0;
+        position: absolute;
+        bottom: -106px;
+        width: 100%;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 36px 60px 36px 0;
+        }
         .logo {
             font-family: 'Jack Frost', sans-serif;
             font-size: 18px;
@@ -244,5 +109,109 @@
         @media (max-width: $breakpoint-2) {
             display: none;
         }  
+    }
+    .mobile-nav {
+        background-color: $bg-bar-col;
+        display: none;
+        @media (max-width: $breakpoint-1) {
+            display: block;
+        }
+        &.open {
+            .list {
+                display: block;
+            }
+            .hamburger {
+                border: 0;
+
+                &:before {
+                    transform: translateY(7px) rotate(45deg);
+                    top: 1px;
+                }
+
+                &:after {
+                    transform: translateY(7px) rotate(-45deg);
+                    top: 1px;
+                }
+            }
+        }
+        .top-nav-bar {
+            padding-top: 18px;
+            padding-bottom: 17px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .hamburger {
+            height: 26px;
+            width: 30px;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            border-top: 3px solid #fff;
+            position: relative;
+            background-color: transparent;
+            margin-top: 6px;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                border-top: 3px solid #fff;
+            }
+
+            &:before {
+                transform: translateY(7px);
+                top: -1px;
+            }
+
+            &:after {
+                transform: translateY(18px);
+                top: -3px;
+            }
+        }
+        .logo {
+            font-family: 'Jack Frost', sans-serif;
+            font-size: 18px;
+            line-height: 1.9;
+            font-weight: 400;
+        }
+        .list{
+            display: none;
+            border-top: 1px solid #289ffa;
+            border-bottom: 2px solid #289ffa;
+            &.control {
+                border-top: none;
+            }
+            .link {
+                width: 100%;
+                display: block;
+                text-align: center;
+                background-color: #1095fa;
+                border-bottom: 1px solid #289ffa;
+                padding: 13px 0;
+                &:hover {
+                    color: #3a3a3a;
+                }
+            }
+            .login {
+                font-weight: 400;
+                &:hover {
+                    color: #3a3a3a;
+                }
+            }
+            .control {
+                padding-top: 18px;
+                padding-bottom: 17px;
+                text-align: center;
+                background-color: #1095fa;
+            }
+            .header-search {
+                margin-right: 0;
+            }
+            .search-field {
+                background-color: #289ffa;
+                border: none;
+            }
+        }
     }
 }

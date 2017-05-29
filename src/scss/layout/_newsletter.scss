@@ -1,5 +1,5 @@
 .newsletter {
-    background-color: $bg-color;
+    background-color: $bg-col-2;
     .container {
         padding-top: 83px;
         padding-bottom: 83px;
@@ -33,7 +33,7 @@
             &:before {
                 height: 1px;
                 width: 158px;
-                background-color: $blue;
+                background-color: $bg-col-1;
                 top: 60%;
                 right: -159px;
                 @media (max-width: $breakpoint-4) {
@@ -45,7 +45,7 @@
                 height: 8px;
                 width: 8px;
                 border-radius: 50%;
-                border: 2px solid $blue;
+                border: 2px solid $bg-col-1;
                 top: calc(50% - 3px);
                 right: -171px;
                 @media (max-width: $breakpoint-4) {
@@ -73,7 +73,7 @@
             &:before {
                 height: 1px;
                 width: 158px;
-                background-color: $blue;
+                background-color: $bg-col-1;
                 top: 50%;
                 left: 0;
             }
@@ -81,7 +81,7 @@
                 height: 8px;
                 width: 8px;
                 border-radius: 50%;
-                border: 2px solid $blue;
+                border: 2px solid $bg-col-1;
                 top: calc(50% - 6px);
                 left: 158px;
             }
@@ -95,7 +95,7 @@
         }
     }
     .btn {
-        @include btn($blue);
+        @include btn($bg-col-1);
         width: 170px;
     }
     .subscribe {

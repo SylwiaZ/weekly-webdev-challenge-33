@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="asset/css/style.css">   
     </head>
     <body>
-        <header>
+        <header class="header">
             <div class="top-bar">
                 <div class="container">
                     <div class="tb-contact">
@@ -31,6 +31,28 @@
                     </div>
                 </div>
             </div>
+            <nav class="site-nav">
+                <div class="container">
+                    <a class="link logo" href="">CEATR</a>
+                    <ul class="list">
+                        <li class="menu-item">
+                            <a href="" class="link">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="link">About us</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="link">Services</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="link">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="link">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <nav class="mobile-nav">
                 <div class="top-nav-bar container">
                     <a class="link logo" href="">CEATR</a>
@@ -63,38 +85,18 @@
                     </li>
                 </ul>
             </nav>
-            <div class="home">
+        </header>
+        <main>
+            <section id="home" class="home">
                 <div class="container">
-                    <nav class="site-nav">
-                        <a class="link logo" href="">CEATR</a>
-                        <ul class="list">
-                            <li class="menu-item">
-                                <a href="" class="link">Home</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="link">About us</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="link">Services</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="link">Blog</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="link">Contact us</a>
-                            </li>
-                        </ul>
-                    </nav>
                     <article class="content">
                         <h1 class="headline-1">Make something valuable</h1>
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  consequat. Duis aute irure dolor in reprehenderit in volExcepteur </p>
                         <button class="btn">Get Started</button>
                     </article>
                 </div>
-            </div>
-        </header>
-        <main>
-            <section class="about-us">
+            </section>
+            <section id="about-us" class="about-us">
                 <div class="container">
                     <article class="about-us_item article">
                         <h2 class="headline-2">We're Global</h2>
@@ -109,10 +111,10 @@
                     </article>
                     <div class="about-us_item item-slider">
                         <div class="slider-area">
-                            <span class="decoration decor_1"></span>
-                            <span class="decoration decor_2"></span>
-                            <span class="decor-bottom decor_3"></span>
-                            <span class="decor-bottom decor_4"></span>
+                            <span class="decor-1"></span>
+                            <span class="decor-2"></span>
+                            <span class="decor-3 "></span>
+                            <span class="decor-4"></span>
                             <div class="counter">
                                 <p><span class="current">01</span>/<span class="total">05</span></p>
                             </div>
@@ -162,28 +164,28 @@
                     </div>
                 </div>
             </section>
-            <section class="services">
+            <section id="services" class="services">
                 <div class="container">
                     <h3 class="headline-3">Awesome <span class="primary-text">Services</span></h3>
                     <p class="under-headline">Our experties area</p>
                     <div class="text-boxes">
                         <article class="text-box">
-                            <span class="decoration decor_1"></span>
-                            <span class="decoration decor_2"></span>
+                            <span class="decor-1"></span>
+                            <span class="decor-2"></span>
                             <span class="icon icon-desktop"></span>
                             <h4 class="headline-4">Interface Design</h4>
                             <p class="paragraph">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi eprehenderit in voluptate velit es laboris ut.</p>
                         </article>
                         <article class="text-box">
-                            <span class="decoration decor_1"></span>
-                            <span class="decoration decor_2"></span>
+                            <span class="decor-1"></span>
+                            <span class="decor-2"></span>
                             <span class="icon icon-mobile"></span>
                             <h4 class="headline-4">iOS Development</h4>
                             <p class="paragraph">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi eprehenderit in voluptate velit es laboris ut.</p>
                         </article>
                         <article class="text-box">
-                            <span class="decoration decor_1"></span>
-                            <span class="decoration decor_2"></span>
+                            <span class="decor-1"></span>
+                            <span class="decor-2"></span>
                             <span class="icon icon-gift"></span>
                             <h4 class="headline-4">Print Design</h4>
                             <p class="paragraph">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi eprehenderit in voluptate velit es laboris ut.</p>
@@ -191,7 +193,7 @@
                     </div>
                 </div>
             </section>
-            <section class="blog">
+            <section id="blog" class="blog">
                 <article class="latest-post container">
                     <h3 class="headline-3"><span class="primary-text">Productive</span> We always maintain best quality of our service</h3>
                     <p class="paragraph"><span class="bolder-text"><span class="big-letter">S</span>ed</span> ut perspiciatis unde omnis iste natus error sit volup tatem accusa doloemque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
@@ -321,7 +323,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer id="footer" class="footer">
             <div class="foot-menu">
                 <nav class="foot-nav container">
                     <section class="column">

@@ -1,0 +1,36 @@
+.home {
+    height: 633px;
+    color: $white-font;
+    background: url('../img/header-bg.png') $bg-col-1;
+    background-position: center bottom -80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .content {
+        text-align: center;
+        padding: 173px 100px 195px 100px;
+        .paragraph {
+            letter-spacing: 2px;
+            margin-bottom: 42px;
+        }
+        @media (max-width: $breakpoint-2) {
+            padding: 90px 30px 150px 30px;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 90px 0 150px 0;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 60px 0 100px 0;
+        }
+        .headline-1 {
+            @media (max-width: $breakpoint-3) {
+                font-size: 44px;
+            }
+            @media (max-width: $breakpoint-4) {
+                font-size: 36px;
+            }
+        }
+    }
+    .btn {
+        @include btn_white();
+    }
+}
