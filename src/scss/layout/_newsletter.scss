@@ -1,0 +1,137 @@
+.newsletter {
+    background-color: $bg-color;
+    .container {
+        padding-top: 83px;
+        padding-bottom: 83px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        @media (max-width: $breakpoint-3) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+    .headline-3 {
+        width: 400px;
+        @media (max-width: $breakpoint-4) {
+            width: 100%;
+            text-align: center;
+        }
+        .primary-text {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 14px;
+            @media (max-width: $breakpoint-4) {
+                margin-bottom: 25px;
+            }
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+            }
+            &:before {
+                height: 1px;
+                width: 158px;
+                background-color: $blue;
+                top: 60%;
+                right: -159px;
+                @media (max-width: $breakpoint-4) {
+                    top: 47px;
+                    right: 48px;
+                }
+            }
+            &:after {
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                border: 2px solid $blue;
+                top: calc(50% - 3px);
+                right: -171px;
+                @media (max-width: $breakpoint-4) {
+                    top: 41px;
+                    right: 36px;
+                }
+            }
+        }
+        .secondary-text {
+            display: block;
+            padding-left: 181px;
+            position: relative;
+            @media (max-width: $breakpoint-4) {
+                padding-left: 0;
+            }
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @media (max-width: $breakpoint-4) {
+                    display: none;
+                }
+            }
+            &:before {
+                height: 1px;
+                width: 158px;
+                background-color: $blue;
+                top: 50%;
+                left: 0;
+            }
+            &:after {
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                border: 2px solid $blue;
+                top: calc(50% - 6px);
+                left: 158px;
+            }
+        }
+    }
+    .paragraph {
+        font-size: 18px;
+        margin-top: 12px;
+        @media (max-width: $breakpoint-3) {
+            text-align: center;
+        }
+    }
+    .btn {
+        @include btn($blue);
+        width: 170px;
+    }
+    .subscribe {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 51px;
+        padding: 0 100px;
+        @media (max-width: $breakpoint-1) {
+            padding: 0;
+        }
+        @media (max-width: $breakpoint-2) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .subscribe-field {
+        height: 65px;
+        width: 371px;
+        border: none;
+        outline: none;
+        padding-left: 54px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        @include box-shadow(0.1);
+        &:focus {
+            @include blue-box-shadow(5px);
+            &::-webkit-input-placeholder { font-weight: 300; }
+            &::-moz-placeholder { font-weight: 300; } /* firefox 19+ */
+            &:-ms-input-placeholder { font-weight: 300; } /* ie */
+        }
+        @media (max-width: $breakpoint-2) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $breakpoint-4) {
+            width: 100%;
+        }
+    }
+}

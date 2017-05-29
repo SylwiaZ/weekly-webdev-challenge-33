@@ -1,0 +1,20 @@
+@import 'vendors/normalize';
+
+@import 'utils/_mixins.scss';
+@import 'utils/_variables.scss';
+
+@import 'base/_base.scss';
+@import 'base/_fonts.scss';
+@import 'base/icons';
+
+@import 'components/_pulsating-dot.scss';
+@import 'components/_slider.scss';
+
+@import 'layout/_header.scss';
+@import 'layout/_home.scss';
+@import 'layout/_about-us.scss';
+@import 'layout/_services.scss';
+@import 'layout/_blog.scss';
+@import 'layout/_newsletter.scss';
+@import 'layout/_partners.scss';
+@import 'layout/_footer.scss';

@@ -1,0 +1,17 @@
+.slider {
+    .slide {
+        outline: none;
+        border: none;
+    }
+
+    .icon-down, .icon-up, .icon-right, .icon-left {
+        font-size: 27px;
+        position: absolute;
+        color: #d2d1d1;
+        cursor: pointer;
+        &:hover {
+            color: #000;
+            transition: 0.3s;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.partners {
+    .container {
+        padding-top: 76px;
+        padding-bottom: 86px;
+        @media (max-width: $breakpoint-3) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+    .headline-3 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 49px;
+    }
+    .brands {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $breakpoint-3) {
+            flex-wrap: wrap;
+        }
+    }
+    .brand-item {
+        height: 180px;
+        width: 270px;
+        @include box-shadow(0.2);
+        transition: 0.3s box-shadow;
+        &:hover {
+            @include blue-box-shadow(10px);
+        }
+        @media (max-width: $breakpoint-1) {
+            width: 225px;
+        }
+        @media (max-width: $breakpoint-2) {
+            height: 150px;
+            width: calc(25% - 15px);
+        }
+        @media (max-width: $breakpoint-3) {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+        @media (max-width: $breakpoint-4) {
+            height: 160px;
+            width: 100%;
+        }
+    }
+    .brand-logo {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}

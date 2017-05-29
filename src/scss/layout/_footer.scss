@@ -1,0 +1,122 @@
+.foot-menu {
+    color: $white;
+    background-color: $blue;
+    .foot-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 77px;
+        padding-bottom: 69px;
+        @media (max-width: $breakpoint-3) {
+            flex-wrap: wrap;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+    .headline-4 {
+        font-size: 18px;
+        letter-spacing: 1px;
+
+    }
+    .link{
+        display: inline-block;
+        line-height: 2.5;
+        &:hover {
+            color: $grey-text;
+        } 
+    }
+    .column {
+        width: 185px;
+        @media (max-width: $breakpoint-3) {
+            width: 50%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @media (max-width: $breakpoint-4) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+    .get-connected {
+        .headline-4 {
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            width: 170px;
+            margin: 0 auto;
+            display: none;
+            @media (max-width: $breakpoint-2) {
+                display: block;
+            }
+        }
+
+        .link {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            &:hover {
+                color: white;
+            }
+            .icon {
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                top: -1px;
+            }
+        }
+    }
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        @media (max-width: $breakpoint-2) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $breakpoint-3) {
+            width: 100%;
+            justify-content: center;
+        }
+        .list-item {
+            display: block;
+            @media (max-width: $breakpoint-3) {
+                margin: 0 7px;
+            }
+        }
+        .icon {
+            height: 40px;
+            width: 40px;
+            border: 2px solid $white;
+            font-size: 17px;
+            color: $white;
+            border-radius: 50%;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            &:hover {
+                color: $blue;
+                background-color: $white;
+                transition: all 0.5s;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                margin: 0;
+            }
+        }
+        .icon-twitter {
+            font-size: 18px;
+        }
+    }
+}
+.copyrights {
+    color: $white;
+    background-color: $dark-blue;
+    text-align: center;
+    .author {
+        padding-top: 16px;
+        padding-bottom: 18px;
+    }
+}

@@ -1,0 +1,46 @@
+.pulsating-dot {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 145px;
+    bottom: -87px;
+    .pulse {
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .circle-1 {
+        height: 10px;
+        width: 10px;
+        background-color: #5cb7fb;
+        border: 1px solid #5cc7ea;
+        z-index: 3;
+    }
+    .circle-2 {
+        height: 20px;
+        width: 20px;
+        background-color: #80c7fc;
+        border: 1px solid #80dee1;
+        z-index: 2;
+        animation: pulsating 2.5s infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .circle-3 {
+        height: 30px;
+        width: 30px;
+        background-color: #b4defd;
+        border: 1px solid #b4ffd7;
+        z-index: 1;
+        animation: pulsating 2.5s infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes pulsating {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.1; }
+    100% { opacity: 1; }
+}

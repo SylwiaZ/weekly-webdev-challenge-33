@@ -1,0 +1,88 @@
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: $grey-text;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-1) {
+        width: 960px;
+    }
+    @media (max-width: $breakpoint-2) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bolder-text {
+    font-weight: 400;
+}
+
+.big-letter {
+    font-size: 30px;
+}
+
+.headline-1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 0.3em;
+    letter-spacing: 5px;
+}
+
+.headline-2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: $grey-text;
+    letter-spacing: 3px;
+    margin-bottom: 26px;
+}
+
+.headline-3 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.headline-4 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.primary-text {
+    color: $blue;
+}
+
+.under-headline {
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.paragraph {
+    letter-spacing: 1px;
+    line-height: 2;
+    line-height: 30px;
+}
+
+.list {
+    list-style: none;
+}
