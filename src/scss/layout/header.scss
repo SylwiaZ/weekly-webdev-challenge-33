@@ -115,24 +115,9 @@
         display: none;
         @media (max-width: $breakpoint-2) {
             display: block;
-        }
-        &.open {
-            .list {
-                display: block;
-            }
-            .hamburger {
-                border: 0;
-
-                &:before {
-                    transform: translateY(7px) rotate(45deg);
-                    top: 1px;
-                }
-
-                &:after {
-                    transform: translateY(7px) rotate(-45deg);
-                    top: 1px;
-                }
-            }
+            width: 100%;
+            position: fixed;
+            z-index: 10;
         }
         .top-nav-bar {
             padding-top: 18px;
@@ -150,7 +135,6 @@
             position: relative;
             background-color: transparent;
             margin-top: 6px;
-
             &:before, &:after {
                 content: '';
                 position: absolute;
@@ -158,12 +142,10 @@
                 width: 100%;
                 border-top: 3px solid #fff;
             }
-
             &:before {
                 transform: translateY(7px);
                 top: -1px;
             }
-
             &:after {
                 transform: translateY(18px);
                 top: -3px;
@@ -179,6 +161,7 @@
             display: none;
             border-top: 1px solid #289ffa;
             border-bottom: 2px solid #289ffa;
+            background-color: #1095fa;
             &.control {
                 border-top: none;
             }
@@ -214,7 +197,41 @@
             }
         }
     }
-
+    .go-top {
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        display: block;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        opacity: 0.5;
+        display: none;
+        transition: all 0.3s;
+        .icon-up {
+            height: inherit;
+            width: inherit;
+            display: block;
+            padding-top: 28px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            &:before {
+                font-size: 20px;
+                position: absolute;
+                top: 16px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+            }
+            &:hover {
+                color: $blue-font;
+            }
+        }
+    }
     &.sticky-bar {
         .site-nav {
             background-color: $bg-bar-col;
@@ -225,6 +242,9 @@
             .container {
                 padding: 18px 0 17px 0; 
             }
+        }
+        .go-top {
+            display: block;
         }
     }
 }

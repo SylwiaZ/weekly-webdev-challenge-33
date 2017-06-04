@@ -42,7 +42,6 @@
         @media (max-width: $breakpoint-4) {
             width: 100%;
         }
-
         .decor-1 {
             @include decor-line(37deg, top left);
             top: 0;

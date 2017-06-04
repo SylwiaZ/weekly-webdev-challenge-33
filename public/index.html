@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="asset/css/style.css">   
     </head>
     <body>
-        <header class="header">
+        <header id="top" class="header">
             <div class="top-bar">
                 <div class="container">
                     <div class="tb-contact">
@@ -85,6 +85,9 @@
                     </li>
                 </ul>
             </nav>
+            <div class="go-top">
+                <a class="icon-up" href="#top">Go top</a>
+            </div>
         </header>
         <main>
             <section id="home" class="home">
@@ -297,8 +300,8 @@
                     <h3 class="headline-3"><span class="primary-text">Subscribe our</span> <span class="secondary-text">Newsletter</span></h3>
                     <p class="paragraph">Subscribe, we will send you our weekly hot offers</p>
                     <form class="subscribe">
-                        <input class="subscribe-field" type="text" name="user-name" placeholder="Enter your Name">
-                        <input class="subscribe-field" type="email" name="email" placeholder="Enter your Email">
+                        <input class="subscribe-field" type="text" name="username" placeholder="Enter your Name" required>
+                        <input class="subscribe-field" type="email" name="email" placeholder="Enter your Email" required>
                         <button type="submit" class="btn">Send us</button>
                     </form>
                 </div>

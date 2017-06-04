@@ -4,6 +4,36 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: $grey-font;
+    &.open {
+        @media (max-width: $breakpoint-4) {
+            overflow-y: hidden;
+        }
+        .mobile-nav {
+            @media (max-width: $breakpoint-4) {
+                height: 100%;
+            }
+            .list {
+                display: block;
+                @media (max-width: $breakpoint-4) {
+                    height: calc(100% - 69px);
+                    overflow-y: auto;
+                }
+            }
+            .hamburger {
+                border: 0;
+
+                &:before {
+                    transform: translateY(7px) rotate(45deg);
+                    top: 1px;
+                }
+
+                &:after {
+                    transform: translateY(7px) rotate(-45deg);
+                    top: 1px;
+                }
+            }
+        } 
+    }
 }
 
 .container {

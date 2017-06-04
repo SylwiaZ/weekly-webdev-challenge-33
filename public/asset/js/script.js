@@ -15,17 +15,17 @@ function handleWindowScroll() {
         } else {
             $('.header').removeClass('sticky-bar');
         }
-    }, 100)) // Wykonanie funkcji max 1 raz na 100ms (10 razy na sekundę)
+    }, 50)) // Wykonanie funkcji max 1 raz na 50ms (20 razy na sekundę)
 }
 
 function handleNavigation() {
     /* Rozwijanie mobilnej nawigacji */
     $('.mobile-nav .hamburger').click(function() {
-        $(this).parents('.mobile-nav').toggleClass('open');
+        $('body').toggleClass('open');
     });
 
     /* Przewijanie do sekcji */
-    $('.menu-item a').click(function(event) {
+    $('.menu-item a, .go-top a').click(function(event) {
         event.preventDefault(); // Blokuje domyślne zachowanie (przeskoczenie do sekcji)
         var anchor = $(this).attr('href'); // Pobiera wartość atrybutu href 
         if($(anchor).length > 0) {

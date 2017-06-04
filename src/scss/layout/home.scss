@@ -4,6 +4,9 @@
     background-position: center bottom -80px;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: $breakpoint-2) {
+        padding-top: 69px;
+    }
     .content {
         text-align: center;
         padding: 173px 100px 195px 100px;

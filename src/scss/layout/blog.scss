@@ -98,9 +98,6 @@
             bottom: 0;
             left: -98px;
             @media (max-width: $breakpoint-1) {
-                left: -114px;
-            }
-            @media (max-width: $breakpoint-2) {
                 left: -88px;
             }
             @media (max-width: $breakpoint-3) {
@@ -110,10 +107,10 @@
         .pulsating-dot {
             top: 97px;
             left: -107px;
-            @media (max-width: $breakpoint-2) {
+            @media (max-width: $breakpoint-1) {
                 left: -79px;
             }
-            @media (max-width: $breakpoint-2) {
+            @media (max-width: $breakpoint-3) {
                 display: none;
             }
         }
@@ -186,9 +183,6 @@
             left: -218px;
             @media (max-width: $breakpoint-1) {
                 bottom: 43px;
-                left: -127px;
-            }
-            @media (max-width: $breakpoint-2) {
                 left: -100px;
             }
             @media (max-width: $breakpoint-3) {
@@ -200,9 +194,6 @@
             left: -166px;
             @media (max-width: $breakpoint-1) {
                 bottom: 44px;
-                left: -90px;
-            }
-            @media (max-width: $breakpoint-2) {
                 left: -65px;
             }
             @media (max-width: $breakpoint-3) {
@@ -249,7 +240,6 @@
                 letter-spacing: normal;
                 word-spacing: 2px;
             }
-
             .par-1 {
                 margin-bottom: 24px;
             }
