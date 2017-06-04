@@ -113,7 +113,7 @@
     .mobile-nav {
         background-color: $bg-bar-col;
         display: none;
-        @media (max-width: $breakpoint-1) {
+        @media (max-width: $breakpoint-2) {
             display: block;
         }
         &.open {
@@ -211,6 +211,19 @@
             .search-field {
                 background-color: #289ffa;
                 border: none;
+            }
+        }
+    }
+
+    &.sticky-bar {
+        .site-nav {
+            background-color: $bg-bar-col;
+            bottom: initial;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            .container {
+                padding: 18px 0 17px 0; 
             }
         }
     }

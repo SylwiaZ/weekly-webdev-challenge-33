@@ -1,15 +1,40 @@
 $(document).ready(function(){
-    
+
+    handleWindowScroll();
     handleNavigation();
     handleAboutUsSlider();
     handleBlogSlider();
 
 });
 
+function handleWindowScroll() {
+    $(window).scroll(throttle(function() {
+        /* Przyklejanie nawigacji */
+        if($(window).scrollTop() > 70) {
+            $('.header').addClass('sticky-bar');
+        } else {
+            $('.header').removeClass('sticky-bar');
+        }
+    }, 100)) // Wykonanie funkcji max 1 raz na 100ms (10 razy na sekundę)
+}
+
 function handleNavigation() {
     /* Rozwijanie mobilnej nawigacji */
     $('.mobile-nav .hamburger').click(function() {
         $(this).parents('.mobile-nav').toggleClass('open');
+    });
+
+    /* Przewijanie do sekcji */
+    $('.menu-item a').click(function(event) {
+        event.preventDefault(); // Blokuje domyślne zachowanie (przeskoczenie do sekcji)
+        var anchor = $(this).attr('href'); // Pobiera wartość atrybutu href 
+        if($(anchor).length > 0) {
+            var distanceFromTop = $(anchor).offset().top;
+
+            $('html, body').animate({
+                scrollTop: distanceFromTop
+            }, 500);
+        }
     });
 }
 
@@ -76,13 +101,16 @@ function handleBlogSlider() {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
+function throttle (callback, limit) {
+    /* Funkcja ograniczająca ilość wykonań innej funkcji (zdarzeń), co pozwala odciążyć przeglądarkę użytkownika */
+    var wait = false;                  
+    return function () {               
+        if (!wait) {                   
+            callback.call();           
+            wait = true;               
+            setTimeout(function () {  
+                wait = false;          
+            }, limit);
+        }
+    }
+}
