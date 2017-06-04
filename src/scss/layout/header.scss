@@ -211,6 +211,7 @@
         opacity: 0.5;
         display: none;
         transition: all 0.3s;
+        z-index: 10;
         .icon-up {
             height: inherit;
             width: inherit;

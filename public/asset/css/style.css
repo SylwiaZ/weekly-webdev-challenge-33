@@ -1044,6 +1044,7 @@ body.open .mobile-nav .hamburger:after {
 	display: none;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
+	z-index: 10;
 }
 
 .header .go-top .icon-up {
@@ -2341,6 +2342,19 @@ body.open .mobile-nav .hamburger:after {
 
 @media (max-width: 767px) {
 
+body.open {
+	overflow-y: hidden;
+}
+
+body.open .mobile-nav {
+	height: 100%;
+}
+
+body.open .mobile-nav .list {
+	height: calc(100% - 69px);
+	overflow-y: auto;
+}
+
 .home .content {
 	padding: 90px 0 150px 0;
 }
@@ -2579,19 +2593,6 @@ body.open .mobile-nav .hamburger:after {
 }
 
 @media (max-width: 480px) {
-
-body.open {
-	overflow-y: hidden;
-}
-
-body.open .mobile-nav {
-	height: 100%;
-}
-
-body.open .mobile-nav .list {
-	height: calc(100% - 69px);
-	overflow-y: auto;
-}
 
 .home .content .headline-1 {
 	font-size: 36px;

@@ -5,16 +5,16 @@ body {
     font-weight: 300;
     color: $grey-font;
     &.open {
-        @media (max-width: $breakpoint-4) {
+        @media (max-width: $breakpoint-3) {
             overflow-y: hidden;
         }
         .mobile-nav {
-            @media (max-width: $breakpoint-4) {
+            @media (max-width: $breakpoint-3) {
                 height: 100%;
             }
             .list {
                 display: block;
-                @media (max-width: $breakpoint-4) {
+                @media (max-width: $breakpoint-3) {
                     height: calc(100% - 69px);
                     overflow-y: auto;
                 }
