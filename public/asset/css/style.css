@@ -1044,7 +1044,7 @@ body.open .mobile-nav .hamburger:after {
 	display: none;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
-	z-index: 10;
+	z-index: 5;
 }
 
 .header .go-top .icon-up {

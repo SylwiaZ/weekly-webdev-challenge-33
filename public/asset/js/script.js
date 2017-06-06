@@ -30,7 +30,7 @@ function handleNavigation() {
         var anchor = $(this).attr('href'); // Pobiera wartość atrybutu href 
         if($(anchor).length > 0) {
             var distanceFromTop = $(anchor).offset().top;
-
+            $('body').removeClass('open');
             $('html, body').animate({
                 scrollTop: distanceFromTop
             }, 500);
