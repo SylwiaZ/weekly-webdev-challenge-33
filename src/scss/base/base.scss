@@ -24,12 +24,12 @@ body {
 
                 &:before {
                     transform: translateY(7px) rotate(45deg);
-                    top: 1px;
+                    top: 4px;
                 }
 
                 &:after {
                     transform: translateY(7px) rotate(-45deg);
-                    top: 1px;
+                    top: 4px;
                 }
             }
         } 
@@ -52,6 +52,9 @@ body {
 .link {
     text-decoration: none;
     color: $white-font;
+    &:focus {
+        outline: 1px solid #7be6f6;
+    }
 }
 
 * {
@@ -115,4 +118,9 @@ body {
 
 .list {
     list-style: none;
+}
+
+.invisible {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
 }

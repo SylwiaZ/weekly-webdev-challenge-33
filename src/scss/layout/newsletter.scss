@@ -116,12 +116,12 @@
         height: 65px;
         width: 371px;
         border: none;
-        outline: none;
         padding-left: 54px;
         font-weight: 400;
         letter-spacing: 1px;
         @include box-shadow(0.1);
         &:focus {
+            outline: 1px solid #7be6f6;
             @include blue-box-shadow(5px);
             &::-webkit-input-placeholder { font-weight: 300; }
             &::-moz-placeholder { font-weight: 300; } /* firefox 19+ */

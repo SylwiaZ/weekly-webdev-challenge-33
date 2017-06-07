@@ -66,7 +66,6 @@
         position: relative;
         @media (max-width: $breakpoint-3) {
             width: 100%;
-            padding-bottom: 65px;
         }
     }
     .slider-area {
@@ -88,8 +87,7 @@
             margin: 0 auto;
             height: auto;
             width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 10px 20px 145px 20px;
         }
         .counter {
             font-size: 18px;
@@ -112,6 +110,22 @@
             }
             @media (max-width: $breakpoint-3) {
                 display: none;
+            }
+        }
+        .btn {
+            @include btn($bg-col-1);
+            position: absolute;
+            left: 145px;
+            bottom: -117px;
+            @media (max-width: $breakpoint-1) {
+                left: 95px;
+            }
+            @media (max-width: $breakpoint-2) {
+                left: 55px;
+            }
+            @media (max-width: $breakpoint-3) {
+                bottom: 0;
+                left: calc(50% - 89px);
             }
         }
     }
@@ -169,7 +183,6 @@
                 background-color: $bg-col-3;
                 color: transparent;
                 cursor: pointer;
-                outline: none;
                 @media (max-width: $breakpoint-3) {
                     vertical-align: middle;
                 }

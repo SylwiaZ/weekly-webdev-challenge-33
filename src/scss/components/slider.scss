@@ -5,10 +5,15 @@
     }
 
     .icon-down, .icon-up, .icon-right, .icon-left {
+        border: none;
+        background-color: transparent;
         font-size: 27px;
         position: absolute;
         color: #d2d1d1;
         cursor: pointer;
+        &:focus {
+            outline: 1px solid #7be6f6;
+        }
         &:hover {
             color: #000;
             transition: 0.3s;

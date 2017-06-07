@@ -24,7 +24,8 @@
                     </div>
                     <div class="control">
                         <form class="header-search" method="get">
-                            <input type="text" name="search" placeholder="Search this site" class="search-field">
+                            <label class="invisible" for="search">Search this site</label>
+                            <input type="search" name="search" id="search" placeholder="Search this site" class="search-field">
                             <button type="submit" class="btn-search icon-search" value="szukaj"></button>
                         </form>
                         <a href="" class="link login">Sign in</a>
@@ -79,7 +80,8 @@
                     </li>
                     <li class="control">
                         <form class="header-search" method="get">
-                            <input type="text" name="search" placeholder="Search this site" class="search-field">
+                            <label class="invisible" for="search-mobile">Search this site</label>
+                            <input type="search" name="search" id="search-mobile" placeholder="Search this site" class="search-field">
                             <button type="submit" class="btn-search icon-search" value="szukaj"></button>
                         </form> 
                     </li>
@@ -290,6 +292,7 @@
                                 <span class="pulse circle-2"></span>
                                 <span class="pulse circle-3"></span>
                             </div>
+                            <button class="btn">Learn more</button>
                         </div>
                     </div>
                     <div class="picture"></div>
@@ -300,8 +303,10 @@
                     <h3 class="headline-3"><span class="primary-text">Subscribe our</span> <span class="secondary-text">Newsletter</span></h3>
                     <p class="paragraph">Subscribe, we will send you our weekly hot offers</p>
                     <form class="subscribe">
-                        <input class="subscribe-field" type="text" name="username" placeholder="Enter your Name" required>
-                        <input class="subscribe-field" type="email" name="email" placeholder="Enter your Email" required>
+                        <label class="invisible" for="username">Enter your name</label>
+                        <input class="subscribe-field" id="username" type="text" name="username" placeholder="Enter your Name" required>
+                        <label class="invisible" for="email">Enter your email</label>
+                        <input class="subscribe-field" id="email" type="email" name="email" placeholder="Enter your Email" required>
                         <button type="submit" class="btn">Send us</button>
                     </form>
                 </div>
@@ -311,16 +316,16 @@
                     <h3 class="headline-3"><span class="primary-text">Brand,</span> We work with</h3>
                     <div class="brands">
                         <div class="brand-item">
-                            <img class="brand-logo" src="asset/img/brand-bisnode.jpg" alt="">
+                            <img class="brand-logo" src="asset/img/brand-bisnode.jpg" alt="Bisnode">
                         </div>
                         <div class="brand-item">
-                            <img class="brand-logo" src="asset/img/brand-pretor.jpg" alt="">
+                            <img class="brand-logo" src="asset/img/brand-pretor.jpg" alt="Pretor">
                         </div>
                         <div class="brand-item">
-                            <img class="brand-logo" src="asset/img/brand-finanstil.jpg" alt="">
+                            <img class="brand-logo" src="asset/img/brand-finanstil.jpg" alt="Finanstil">
                         </div>
                         <div class="brand-item">
-                            <img class="brand-logo" src="asset/img/brand-inkasso.jpg" alt="">
+                            <img class="brand-logo" src="asset/img/brand-inkasso.jpg" alt="Inkasso">
                         </div>
                     </div>
                 </div>

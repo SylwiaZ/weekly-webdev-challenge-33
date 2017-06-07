@@ -25,7 +25,7 @@ function handleNavigation() {
     });
 
     /* Przewijanie do sekcji */
-    $('.menu-item a, .go-top a').click(function(event) {
+    $('.menu-item a, .go-top a, .header .logo').click(function(event) {
         event.preventDefault(); // Blokuje domyślne zachowanie (przeskoczenie do sekcji)
         var anchor = $(this).attr('href'); // Pobiera wartość atrybutu href 
         if($(anchor).length > 0) {
@@ -33,7 +33,9 @@ function handleNavigation() {
             $('body').removeClass('open');
             $('html, body').animate({
                 scrollTop: distanceFromTop
-            }, 500);
+            }, 500, function() {
+                location.hash = anchor;
+            });
         }
     });
 }
@@ -44,8 +46,8 @@ function handleAboutUsSlider() {
         dots: true,
         arrows: true,
         infinite: true,
-        nextArrow: '<i class="icon-down"></i>',
-        prevArrow: '<i class="icon-up"></i>',
+        nextArrow: '<button class="icon-down"></button>',
+        prevArrow: '<button class="icon-up"></button>',
         vertical: true,
         autoplay: true,
         autoplaySpeed: 4000,
@@ -76,8 +78,8 @@ function handleBlogSlider() {
         dots: true,
         arrows: true,
         infinite: true,
-        nextArrow: '<i class="icon-right"></i>',
-        prevArrow: '<i class="icon-left"></i>',
+        nextArrow: '<button class="icon-right"></button>',
+        prevArrow: '<button class="icon-left"></button>',
         autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 1,

@@ -56,11 +56,14 @@
             &:hover {
                 color: $white-font;
             }
-            .icon {
-                font-size: 16px;
-                position: absolute;
-                left: 0;
-                top: -1px;
+        }
+        .icon {
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            &:focus {
+                outline: 2px solid #7be6f6;
             }
         }
     }
